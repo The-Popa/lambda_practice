@@ -5,16 +5,19 @@ import java.util.Scanner;
 import static se.lexicon.Exercises.*;
 
 
-public class App 
+public class App
+
 {
 
     private static final Scanner SCANNER;
 
     static {
         SCANNER = new Scanner(System.in);
+
     }
 
     public static void main( String[] args )
+
     {
         boolean done = false;
         String message = "Running exercise...";
@@ -23,56 +26,65 @@ public class App
             System.out.print("Choose from 1-13: ");
             int number = getInt();
             switch (number){
-                case 0:
-                    done = true;
+                case 0: done = true;
                     break;
+
                 case 1:
                     exercise1(message + number);
                     break;
+
                 case 2:
                     exercise2(message + number);
                     break;
+
                 case 3:
                     exercise3(message + number);
                     break;
+
                 case 4:
                     exercise4(message + number);
                     break;
+
                 case 5:
                     exercise5(message + number);
                     break;
+
                 case 6:
                     exercise6(message + number);
                     break;
+
                 case 7:
                     exercise7(message + number);
                     break;
+
                 case 8:
                     exercise8(message + number);
                     break;
+
                 case 9:
                     exercise9(message + number);
                     break;
+
                 case 10:
                     exercise10(message + number);
                     break;
+
                 case 11:
                     exercise11(message + number);
                     break;
+
                 case 12:
                     exercise12(message + number);
                     break;
+
                 case 13:
                     exercise13(message + number);
                     break;
             }
 
-
         }while(!done);
         SCANNER.close();
     }
-
-
 
     public static String menu(){
         StringBuilder stringBuilder = new StringBuilder("Please make a choice: \n");
@@ -93,6 +105,7 @@ public class App
         stringBuilder.append("12.\tUsing findAndSort() find everyone born before 1950 sorted reversed by lastest to earliest.\n");
         stringBuilder.append("13.\tUsing findAndSort() find everyone sorted in following order: lastName > firstName > birthDate.\n");
         return stringBuilder.toString();
+
     }
 
     public static int getInt(){
@@ -105,6 +118,7 @@ public class App
             }catch (NumberFormatException ex){
                 System.out.println("Not a integer");
             }
+
             if(!validNumber){
                 System.out.println("Try again");
             }

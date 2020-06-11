@@ -25,5 +25,4 @@ public class RandomNumberGenerator {
 	public boolean getRandomBoolean() {
 		return rng.nextBoolean();
 	}
-
 }
